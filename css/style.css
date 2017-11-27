@@ -17,6 +17,10 @@ h1 {
 	font-size: 30px;
 }
 
+h4 {
+	color: #FEA108;
+	font-weight: 600;
+}
 
 #bio-pic {
 	margin-top: 15px;
@@ -29,7 +33,7 @@ h1 {
 }
 
 #header-list hr {
-	border-color: white;
+	border-color: #FFFFFF;
 }
 
 #header-list li {
@@ -41,7 +45,7 @@ h1 {
 }
 
 #header-list a {
-	color: white;
+	color: #FFFFFF;
 }
 
 .text-thin {
@@ -58,7 +62,7 @@ hr {
 
 #container-1 {
 	background-color: #24292e;
-	color: white;
+	color: #FFFFFF;
 }
 
 #container-2 {
@@ -70,9 +74,8 @@ hr {
 	background-color: #FFFFFF;
 }
 
-.uni-name {
-	background-color: #FFFFFF;
-	box-shadow: 0 1px 3px rgba(0,0,0,.25);
+#education h4 {
+	color: white;
 }
 
 #project-container {

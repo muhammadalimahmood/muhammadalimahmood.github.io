@@ -1,6 +1,8 @@
 var htmlHeaderName = '<h1 id="name" class="text-thin">%data%</h1>';
 var htmlPic = '<img src="%data%" id = "bio-pic" class="img-responsive center-block" alt="Image">';
 var htmlRole = '<h3>%data%</h3>';
+var htmlSkillsList = '<h4>SKILLS: </h4><ul class="list-unstyled list-inline"">%data%</ul>';
+var htmlSkill = '<li><strong>%data%</strong></li>';
 var htmlBioList = '<ul class="list-unstyled list-inline">%data%</ul>';
 var htmlMobile='<li><span class="octicon octicon-device-mobile"></span> %data%</li>';
 var htmlEmail = '<li><span class="octicon octicon-mail"></span> %data%</li>';

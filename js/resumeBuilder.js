@@ -1,6 +1,6 @@
 var data = {
     "bio": {
-        "name": "Muhammad Ali Mahmood",
+        "name": "MUHAMMAD ALI MAHMOOD",
         "role": "Front-End Web Developer",
         "bioPic": "images/profilepic.jpg",
         "contacts": {
@@ -8,7 +8,7 @@ var data = {
             "email": "muhammadalimahmood@yahoo.com",
             "github": "muhammadalimahmood"
         },
-        "skills": ["HTML/CSS", "JavaScript", "AJAX", "JSON", "Bootstrap", "Grunt/Gulp", "USB Debugging"]
+        "skills": ["HTML/CSS", "JavaScript", "AJAX", "JSON", "Bootstrap", "HTML Canvas", "git/GitHub", "Grunt/Gulp", "USB Debugging"]
     },
     "education": {
         "university": [
@@ -121,6 +121,12 @@ var view = {
         model.appendResume(bio.bioPic, htmlPic, "#title-logo");
         model.appendResume(bio.name, htmlHeaderName, "#header-text");
         model.appendResume(bio.role, htmlRole, "#header-text");
+
+        var listString = '';
+        for (var s in bio.skills){
+            listString += htmlSkill.replace('%data%', bio.skills[s]);
+        }
+        model.appendResume(listString, htmlSkillsList, '#header-text');
 
         var contactList = htmlMobile.replace("%data%", bio.contacts.mobile) + htmlEmail.replace("%data%", bio.contacts.email) + htmlGitHub.replace("%data%", bio.contacts.github);
         model.appendResume(contactList, htmlBioList, "#header-list");
