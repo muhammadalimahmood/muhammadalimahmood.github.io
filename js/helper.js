@@ -17,4 +17,4 @@ var htmlProjectContainer = '<div id="project-container" class="col-lg-4 col-md-4
 var htmlProjectTitle = '<h3>%data%</h3>';
 var htmlProjectDescription = '<p>%data% ';
 var htmlProjectUrl = '<a href="%data%">  Check it out!</a></p>';
-var htmlProjectImage = '<picture><source media="(min-width: 980px)" srcset="images/%data%-large_1x.png 1x, images/%data%-large_2x.png 2x" ><source media="(min-width: 400px)" srcset="images/%data%-large_1x.png" ><source media="(max-width: 400px)" srcset="images/%data%-small.png" ><img src="images/%data%-original.png" alt="%data%.png"></picture>';
+var htmlProjectImage = '<picture><source media="(min-width: 980px)" srcset="images/%data%-large_1x.png 1x, images/%data%-large_2x.png 2x" ><img src="images/%data%-original.png" alt="%data%.png"></picture>';
