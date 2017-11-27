@@ -1,0 +1,167 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+/*	border: 1px solid red;*/
+}
+
+body {
+	font-family: "lato";
+	font-weight: 300;
+	color: #24292e;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+
+#bio-pic {
+	margin-top: 15px;
+	width: 130px;
+	border-radius: 60px;
+}
+
+#header {
+	margin-top: 20px;
+}
+
+#header-list hr {
+	border-color: white;
+}
+
+#header-list li {
+	padding-right: 50px;
+} 
+
+#header-list li:last-child {
+	padding-right: 0px;
+}
+
+#header-list a {
+	color: white;
+}
+
+.text-thin {
+	font-weight: 300;
+}
+
+hr {
+	border-width: 2px;
+}
+
+.container {
+	padding-bottom: 5px;
+}
+
+#container-1 {
+	background-color: #24292e;
+	color: white;
+}
+
+#container-2 {
+	background-color: #FEA108;
+	color: #FFFFFF;
+}
+
+#container-3 {
+	background-color: #FFFFFF;
+}
+
+.uni-name {
+	background-color: #FFFFFF;
+	box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+#project-container {
+	height: auto;
+	margin: 15px 0;
+	/*text-align: justify;*/
+}
+
+#project-container img{
+	width: 100%;
+	box-shadow: 0 0 15px #CCC;
+	border-radius: 50%;
+	transition: all .5s;
+}
+
+#project-container:hover img{
+	width: 100%;
+	box-shadow: 0 0 0 #CCC;
+	border-radius: 0px;
+}
+
+
+#project-container h3 {
+	padding: 5px 5px 5px 10px;
+	color: #FFFFFF;
+	background-image: linear-gradient(90deg,#EF8D24 0,#FEA108 100%);
+}
+
+#project-container p{
+	overflow: hidden;
+}
+
+#project-container a{
+	display:inline-block;
+	color: #FFFFFF;
+	background-color: #1B75BC;/*#525c65;*/
+	padding: 0 0 0 10px;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#project-container a:after{
+	display: inline-block;
+	opacity: 0;
+	background-color: #1B75BC;/*#24292e; */
+	padding: 0 0 0 0;
+	border-radius: 3px;
+	color: #FFFFFF;
+	transition: transform .3s,opacity .2s,margin .2s,padding .2s;
+	content: '➔';
+	transform: translateX(-20px);
+}
+
+#project-container a:hover:after{
+	opacity: 1;
+	padding: 0 5px 0 0;
+	transform: translateX(10px);
+}
+
+/*#project-container a:hover{
+	background-color: #24292e; 
+}*/
+
+footer {
+	text-align: center;
+	padding: 10px 10px 1px 10px;
+	color: #FFFFFF;
+	background-color: #24292e;
+
+}
+
+@media screen and (max-width: 743px) {
+	#header-list li {
+		width:100%;
+		padding: 0px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}	
+}
+
+@media screen and (max-width: 500px) {
+	#bio-pic {
+		display: none;
+	}
+
+	#header-text {
+		width: 100%;
+	}
+}
