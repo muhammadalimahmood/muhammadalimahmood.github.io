@@ -90,12 +90,19 @@ var data = {
                 "image": "frogger",
                 "url": "froggerGame/index.html",
                 "skills": ""
+            },
+            {
+                "title": "Exo-Planets",
+                "description": "Chained JS Promise's to fetch data about planets in parallel while rendering it serially.",
+                "image": "exo",
+                "url": "exoPlanets/index.html",
+                "skills": ""
             }
         ]
     }
 };
 
-var model = {
+var controller = {
     init: function(){
         view.init();
         view.displayEducation();
@@ -117,26 +124,26 @@ var model = {
 
 var view = {
     init: function(){
-        var bio = model.getBio();
-        model.appendResume(bio.bioPic, htmlPic, "#title-logo");
-        model.appendResume(bio.name, htmlHeaderName, "#header-text");
-        model.appendResume(bio.role, htmlRole, "#header-text");
+        var bio = controller.getBio();
+        controller.appendResume(bio.bioPic, htmlPic, "#title-logo");
+        controller.appendResume(bio.name, htmlHeaderName, "#header-text");
+        controller.appendResume(bio.role, htmlRole, "#header-text");
 
         var listString = '';
         for (var s in bio.skills){
             listString += htmlSkill.replace('%data%', bio.skills[s]);
         }
-        model.appendResume(listString, htmlSkillsList, '#header-text');
+        controller.appendResume(listString, htmlSkillsList, '#header-text');
 
         var contactList = htmlMobile.replace("%data%", bio.contacts.mobile) + htmlEmail.replace("%data%", bio.contacts.email) + htmlGitHub.replace("%data%", bio.contacts.github);
-        model.appendResume(contactList, htmlBioList, "#header-list");
+        controller.appendResume(contactList, htmlBioList, "#header-list");
     },
     displayEducation: function(){
-        var education = model.getEducation();
+        var education = controller.getEducation();
 
         for(var e in education.university){
             $("#education").append(htmlUniName.replace("%data%", education.university[e].name) + htmlDegree.replace("%data%", education.university[e].degree) + htmlMajor.replace("%data%", education.university[e].major));
-            model.appendResume(education.university[e].year, htmlUniDuration, "#education");
+            controller.appendResume(education.university[e].year, htmlUniDuration, "#education");
         }
     },
     displayProjects: function(){
@@ -144,15 +151,15 @@ var view = {
             var target = this;
             return target.replace(new RegExp(search, 'g'), replacement);
         };
-        var projects = model.getProjects();
+        var projects = controller.getProjects();
         for (var p in projects.project){
             var project = htmlProjectImage.replaceAll("%data%", projects.project[p].image) + htmlProjectTitle.replace("%data%", projects.project[p].title) + htmlProjectDescription.replace("%data%", projects.project[p].description) + htmlProjectUrl.replace('%data%', projects.project[p].url);
-            model.appendResume(project, htmlProjectContainer, "#projects");
+            controller.appendResume(project, htmlProjectContainer, "#projects");
         }
     }
 };
 
 // jQuery runs this function after the DOM is loaded. Same as document.ready()
 $(function(){
-    model.init();
+    controller.init();
 });
